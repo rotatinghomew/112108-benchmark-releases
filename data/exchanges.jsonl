@@ -1,0 +1,18 @@
+{"step": 1, "kind": "brief", "body": {"round": "r7", "min": {"train": 2, "tune": 1, "blind": 2}, "stations": {"train": ["a", "b"], "tune": ["b"], "blind": ["a", "b"]}}}
+{"step": 1, "kind": "image", "body": {"id": "a/11", "bytes_id": "z1", "use": ["train", "blind"], "marked": true}}
+{"step": 1, "kind": "image", "body": {"id": "a/12", "bytes_id": "z2", "use": ["train", "blind"], "marked": true}}
+{"step": 1, "kind": "image", "body": {"id": "b/11", "bytes_id": "z1", "use": ["train", "blind"], "marked": true}}
+{"step": 1, "kind": "image", "body": {"id": "b/15", "bytes_id": "z3", "use": ["tune"], "marked": true}}
+{"step": 1, "kind": "image", "body": {"id": "a/21", "bytes_id": "z4", "use": ["blind"], "marked": true}}
+{"step": 1, "kind": "image", "body": {"id": "a/22", "bytes_id": "z5", "use": ["train", "blind"], "marked": true}}
+{"step": 1, "kind": "image", "body": {"id": "b/19", "bytes_id": "z8", "use": ["train"], "marked": true}}
+{"step": 1, "kind": "derived", "body": {"id": "d1", "item": "a/12", "parent": "a/11"}}
+{"step": 1, "kind": "derived", "body": {"id": "d2", "item": "b/19", "parent": "b/20"}}
+{"step": 2, "kind": "receipt", "body": {"round": "r7", "release": "issued-7", "purpose": "train", "ids": ["a/11", "a/12"]}}
+{"step": 2, "kind": "receipt", "body": {"round": "r7", "release": "issued-7", "purpose": "blind", "ids": ["b/11", "a/21"]}}
+{"step": 2, "kind": "receipt", "body": {"round": "r7", "release": "issued-7", "purpose": "tune", "ids": ["b/15"]}}
+{"step": 3, "kind": "peer", "body": {"id": "p1", "left": "a/12", "right": "b/11"}}
+{"step": 4, "kind": "retire", "body": {"item": "a/11", "id": "withdraw-a11"}}
+{"step": 5, "kind": "image", "body": {"id": "b/20", "bytes_id": "z9", "use": ["train"], "marked": true}}
+{"step": 5, "kind": "image", "body": {"id": "a/23", "bytes_id": "za", "use": ["train"], "marked": true}}
+{"step": 6, "kind": "alias", "body": {"id": "wd1", "evidence": "p1"}}
